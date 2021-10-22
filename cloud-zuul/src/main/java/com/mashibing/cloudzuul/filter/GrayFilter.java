@@ -34,7 +34,8 @@ public class GrayFilter extends ZuulFilter {
         // 根据用户id 查规则， meata v1
         if (userId == 1){
             RibbonFilterContextHolder.getCurrentContext().add("version", "v1");
-        }else if (userId == 2){
+        }
+        if (userId == 2){
             RibbonFilterContextHolder.getCurrentContext().add("version", "v2");
         }
         return null;
