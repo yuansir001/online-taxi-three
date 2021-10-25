@@ -9,6 +9,9 @@ import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpServletRequest;
 
+/**
+ * 灰度filter
+ */
 @Component
 public class GrayFilter extends ZuulFilter {
     @Override
@@ -23,11 +26,12 @@ public class GrayFilter extends ZuulFilter {
 
     @Override
     public boolean shouldFilter() {
-        return true;
+        return false;
     }
 
     @Override
     public Object run() throws ZuulException {
+        System.out.println("灰度过滤器");
         RequestContext currentContext = RequestContext.getCurrentContext();
         HttpServletRequest request = currentContext.getRequest();
         int userId = Integer.parseInt(request.getHeader("userId"));

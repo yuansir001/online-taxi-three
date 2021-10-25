@@ -20,7 +20,7 @@ spring:
       test-on-borrow: false
       test-on-return: false
   redis:
-    host: 192.168.237.136
+    host: 192.168.237.137
     password:
     port: 6379
 
@@ -38,3 +38,14 @@ eureka:
   instance:
     hostname: localhost
     instance-id: online-taxi-zuul
+
+zuul:
+  prefix: /api
+  strip-prefix: true
+  routes:
+    api-passenger: /zuul-api-passenger/**
+    service-sms: /zuul-service-sms/**
+  ignored-services:
+    - api-passenger
+    - service-sms
+  sensitive-headers:
