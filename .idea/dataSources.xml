@@ -7,5 +7,17 @@
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306/online-taxi-three</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="service-order@localhost" uuid="f8a18fd1-c970-45b7-8bea-6b4a81d1a295">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/service-order</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="service-pay@localhost" uuid="675a8f29-62f1-47f4-9888-f26b36aace24">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/service-pay</jdbc-url>
+    </data-source>
   </component>
 </project>

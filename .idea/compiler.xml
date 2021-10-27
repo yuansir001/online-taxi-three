@@ -13,6 +13,8 @@
         <module name="internal-common" />
         <module name="cloud-eureka" />
         <module name="service-sms" />
+        <module name="service-pay" />
+        <module name="service-order" />
       </profile>
     </annotationProcessing>
   </component>
